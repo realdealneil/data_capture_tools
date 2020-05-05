@@ -1,0 +1,1 @@
+gst-launch-1.0 v4l2src device="/dev/video0" num-buffers=10000 ! videoconvert ! omxh264enc bitrate=10000000 ! 'video/x-h264, stream-format=(string)byte-stream' ! h264parse ! qtmux ! filesink location=$1/downcam.mp4 -e

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="dataCollectApp" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/dataCollectApp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/dataCollectApp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-g" />
+			<Add directory="pthread" />
+			<Add directory="/usr/include/gstreamer-1.0" />
+			<Add directory="/usr/include/glib-2.0" />
+			<Add directory="/usr/lib/arm-linux-gnueabihf/glib-2.0/include" />
+			<Add directory="./FlyCapture" />
+			<Add directory="imu" />
+			<Add directory="vnImu/include" />
+			<Add directory="utilities" />
+		</Compiler>
+		<Linker>
+			<Add library="gstapp-1.0" />
+			<Add library="gstbase-1.0" />
+			<Add library="gstreamer-1.0" />
+			<Add library="gobject-2.0" />
+			<Add library="glib-2.0" />
+			<Add library="flycapture" />
+			<Add library="boost_program_options" />
+			<Add library="pthread" />
+		</Linker>
+		<Unit filename="gst-app-src.cpp" />
+		<Unit filename="gst-app-src.h" />
+		<Unit filename="imu/ChrImuPacketParser.cpp" />
+		<Unit filename="imu/ChrImuPacketParser.h" />
+		<Unit filename="imu/ChrPacket.cpp" />
+		<Unit filename="imu/ChrPacket.h" />
+		<Unit filename="imu/SerialPortLinux.cpp" />
+		<Unit filename="imu/SerialPortLinux.h" />
+		<Unit filename="utilities/flaUtilities.cpp" />
+		<Unit filename="utilities/flaUtilities.h" />
+		<Unit filename="vnImu/include/vectornav.h" />
+		<Unit filename="vnImu/include/vn100.h" />
+		<Unit filename="vnImu/include/vn200.h" />
+		<Unit filename="vnImu/include/vn_common.h" />
+		<Unit filename="vnImu/include/vn_errorCodes.h" />
+		<Unit filename="vnImu/include/vn_kinematics.h" />
+		<Unit filename="vnImu/include/vn_linearAlgebra.h" />
+		<Unit filename="vnImu/include/vn_math.h" />
+		<Unit filename="vnImu/include/vncp_services.h" />
+		<Unit filename="vnImu/include/vndevice.h" />
+		<Unit filename="vnImu/include/vnint.h" />
+		<Unit filename="vnImu/src/arch/linux/vncp_services.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="vnImu/src/vn100.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="vnImu/src/vn200.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="vnImu/src/vndevice.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
